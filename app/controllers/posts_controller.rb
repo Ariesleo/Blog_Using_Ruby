@@ -28,6 +28,32 @@ class PostsController < ApplicationController
 
     end
 
+    #update the post
+    def update
+    	#operation similar to show
+    	@post = Post.find(params[:id])
+
+    	#helps to update the post
+    	if @post.update(post_params)
+    		redirect_to @post
+    	else
+    		render 'edit'
+    	end
+    end
+
+    def edit
+    	#Helps to edit the post
+    	@post = Post.find(params[:id])
+    end
+
+    #below method helps to delete the post
+    def destroy
+    	@post = Post.find(params[:id])
+    	@post.destroy
+
+    	redirect_to posts_path
+    end
+
 
     private
     def post_params
