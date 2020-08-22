@@ -54,7 +54,7 @@ group :development do
   gem 'guard', '~> 2.16', '>= 2.16.2'
 
   #Guard::LiveReload automatically reloads your browser when 'view' files are modified.
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
