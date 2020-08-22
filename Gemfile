@@ -12,6 +12,10 @@ gem 'puma', '~> 4.1'
 
 #user authentication
 gem 'device'
+
+#Bulma CSS Modern css change here
+gem 'bulma-rails', '~> 0.9.0'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 gem 'bootstrap-sass', '~> 3.4.1'
@@ -25,12 +29,6 @@ gem 'turbolinks', '~> 5'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
-# Make errors better looking change here
-gem 'better_errors', '~> 2.7', '>= 2.7.1'
-
-#Bulma CSS Modern css change here
-gem 'bulma-rails', '~> 0.9.0'
 
 #simple forms change here
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
@@ -55,6 +53,9 @@ group :development do
 
   #Guard::LiveReload automatically reloads your browser when 'view' files are modified.
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+
+  # Make errors better looking change here
+  gem 'better_errors', '~> 2.7', '>= 2.7.1'
 end
 
 group :test do
