@@ -1,12 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>TestApp</title>
-  </head>
+<h1 class="title" style="margin-left: 1%;">BLOG</h1>
 
-  <body>
-    <div class="container">
-        <h1 style="font-size:40px;" >Hello world</h1>
-    </div>
-  </body>
-</html>
+<div class="section">
+	<div class="container">
+		<% @posts.each do |post| %>
+		<div class="card">
+			<div class="card-content">
+				<div class="media">
+					<div class="media-content">
+						<p class="title is-4">
+							<%= link_to post.title, post %>	
+						</p>
+					</div>
+				</div>
+				<div class="content">
+					<%= post.content %>
+				</div>
+				<!--<div class="comment-count">
+					<span class="tag is-rounded">
+						<% #comment count %>
+					</span>
+				</div>-->
+			</div>
+		</div>
+		<% end %>
+	</div>
+</div>
